@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <% if (results.length === 0) { %>
+    <p>No results found.</p>
+  <% } else { %>
+    <ul>
+      <% results.forEach(company => { %>
+        <li><strong><%= company.company %></strong> — Ticker: <%= company.ticker %>, Price: $<%= company.price %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+  <a href="/">Search again</a>
+</body>
+</html>
